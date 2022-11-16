@@ -39,17 +39,12 @@ jobs:
           # For commitlint; ideally this would only check out the feature branch's history, but
           # that's not currently an option.
           fetch-depth: ${{ github.event_name == 'push' }}
-      - name: Cache dependencies
-        id: cache
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        if: '!steps.cache.outputs.cache-hit'
+        uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516 # tag=v3
         with:
           node-version: ${{ matrix.node-version }}
+          cache: yarn
+          registry-url: https://registry.yarnpkg.com/
       - name: Install dependencies
         if: '!steps.cache.outputs.cache-hit'
         run: yarn install --immutable
