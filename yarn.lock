@@ -2244,8 +2244,8 @@ __metadata:
     nyc: ^15.0.1
     p-finally: ^1.0.0
     prettier: ^2.0.4
-    promise-callbacks: ^3.8.1
-    redis: ^2.7.1
+    promise-callbacks: ^3.8.2
+    redis: ^2.8.0
     sandboxed-module: ^2.0.3
     semantic-release: ^17.2.2
     semver: ^7.2.1
@@ -8300,7 +8300,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"promise-callbacks@npm:^3.8.1":
+"promise-callbacks@npm:^3.8.2":
   version: 3.8.2
   resolution: "promise-callbacks@npm:3.8.2"
   dependencies:
@@ -8622,7 +8622,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"redis@npm:^2.7.1":
+"redis@npm:^2.8.0":
   version: 2.8.0
   resolution: "redis@npm:2.8.0"
   dependencies:
