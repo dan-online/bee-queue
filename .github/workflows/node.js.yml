@@ -56,7 +56,3 @@ jobs:
       - run: yarn ci
         env:
           BEE_QUEUE_TEST_REDIS: redis://localhost:6379
-      - run: yarn ci:commitlint
-        if: "github.event_name != 'push' && github.actor != 'dependabot[bot]'"
-        env:
-          GITHUB_BASE_REF: ${{ github.event.pull_request.base.ref }}
