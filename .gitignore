@@ -36,3 +36,7 @@ jspm_packages
 .DS_Store
 *.sublime-workspace
 notes.txt
+
+# Yarn files
+.yarn/install-state.gz
+.yarn/build-state.yml

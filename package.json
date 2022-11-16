@@ -76,5 +76,6 @@
   "bugs": {
     "url": "https://github.com/bee-queue/bee-queue/issues"
   },
-  "homepage": "https://github.com/bee-queue/bee-queue"
+  "homepage": "https://github.com/bee-queue/bee-queue",
+  "packageManager": "yarn@3.3.0"
 }
