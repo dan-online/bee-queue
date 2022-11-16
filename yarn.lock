@@ -1047,7 +1047,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/git@npm:^9.0.0":
+"@semantic-release/git@npm:^9.0.1":
   version: 9.0.1
   resolution: "@semantic-release/git@npm:9.0.1"
   dependencies:
@@ -1065,7 +1065,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/github@npm:^7.0.0, @semantic-release/github@npm:^7.1.1":
+"@semantic-release/github@npm:^7.0.0, @semantic-release/github@npm:^7.2.3":
   version: 7.2.3
   resolution: "@semantic-release/github@npm:7.2.3"
   dependencies:
@@ -1091,7 +1091,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/npm@npm:^7.0.0, @semantic-release/npm@npm:^7.0.6":
+"@semantic-release/npm@npm:^7.0.0, @semantic-release/npm@npm:^7.1.3":
   version: 7.1.3
   resolution: "@semantic-release/npm@npm:7.1.3"
   dependencies:
@@ -1114,7 +1114,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/release-notes-generator@npm:^9.0.0, @semantic-release/release-notes-generator@npm:^9.0.1":
+"@semantic-release/release-notes-generator@npm:^9.0.0, @semantic-release/release-notes-generator@npm:^9.0.3":
   version: 9.0.3
   resolution: "@semantic-release/release-notes-generator@npm:9.0.3"
   dependencies:
@@ -1686,7 +1686,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ava-spec@npm:^1.1.0":
+"ava-spec@npm:^1.1.1":
   version: 1.1.1
   resolution: "ava-spec@npm:1.1.1"
   dependencies:
@@ -2230,25 +2230,25 @@ __metadata:
     "@semantic-release/changelog": ^5.0.1
     "@semantic-release/commit-analyzer": ^8.0.1
     "@semantic-release/exec": ^5.0.0
-    "@semantic-release/git": ^9.0.0
-    "@semantic-release/github": ^7.1.1
-    "@semantic-release/npm": ^7.0.6
-    "@semantic-release/release-notes-generator": ^9.0.1
+    "@semantic-release/git": ^9.0.1
+    "@semantic-release/github": ^7.2.3
+    "@semantic-release/npm": ^7.1.3
+    "@semantic-release/release-notes-generator": ^9.0.3
     ava: ^0.25.0
-    ava-spec: ^1.1.0
-    conventional-changelog-conventionalcommits: ^4.4.0
-    eslint: ^7.8.1
-    eslint-config-prettier: ^6.10.1
-    eslint-plugin-prettier: ^3.1.2
+    ava-spec: ^1.1.1
+    conventional-changelog-conventionalcommits: ^4.6.3
+    eslint: ^7.32.0
+    eslint-config-prettier: ^6.15.0
+    eslint-plugin-prettier: ^3.4.1
     lolex: ^6.0.0
-    nyc: ^15.0.1
+    nyc: ^15.1.0
     p-finally: ^1.0.0
-    prettier: ^2.0.4
+    prettier: ^2.7.1
     promise-callbacks: ^3.8.2
     redis: ^2.8.0
-    sandboxed-module: ^2.0.3
-    semantic-release: ^17.2.2
-    semver: ^7.2.1
+    sandboxed-module: ^2.0.4
+    semantic-release: ^17.4.7
+    semver: ^7.3.8
     sinon: ^7.5.0
   languageName: unknown
   linkType: soft
@@ -3030,7 +3030,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"conventional-changelog-conventionalcommits@npm:^4.3.1, conventional-changelog-conventionalcommits@npm:^4.4.0":
+"conventional-changelog-conventionalcommits@npm:^4.3.1, conventional-changelog-conventionalcommits@npm:^4.6.3":
   version: 4.6.3
   resolution: "conventional-changelog-conventionalcommits@npm:4.6.3"
   dependencies:
@@ -3696,7 +3696,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^6.10.1":
+"eslint-config-prettier@npm:^6.15.0":
   version: 6.15.0
   resolution: "eslint-config-prettier@npm:6.15.0"
   dependencies:
@@ -3709,7 +3709,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:^3.1.2":
+"eslint-plugin-prettier@npm:^3.4.1":
   version: 3.4.1
   resolution: "eslint-plugin-prettier@npm:3.4.1"
   dependencies:
@@ -3757,7 +3757,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^7.8.1":
+"eslint@npm:^7.32.0":
   version: 7.32.0
   resolution: "eslint@npm:7.32.0"
   dependencies:
@@ -7460,7 +7460,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nyc@npm:^15.0.1":
+"nyc@npm:^15.1.0":
   version: 15.1.0
   resolution: "nyc@npm:15.1.0"
   dependencies:
@@ -8213,7 +8213,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.0.4":
+"prettier@npm:^2.7.1":
   version: 2.7.1
   resolution: "prettier@npm:2.7.1"
   bin:
@@ -8993,7 +8993,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sandboxed-module@npm:^2.0.3":
+"sandboxed-module@npm:^2.0.4":
   version: 2.0.4
   resolution: "sandboxed-module@npm:2.0.4"
   dependencies:
@@ -9003,7 +9003,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semantic-release@npm:^17.2.2":
+"semantic-release@npm:^17.4.7":
   version: 17.4.7
   resolution: "semantic-release@npm:17.4.7"
   dependencies:
@@ -9066,7 +9066,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:*, semver@npm:^7.0.0, semver@npm:^7.1.1, semver@npm:^7.1.2, semver@npm:^7.2.1, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.7":
+"semver@npm:*, semver@npm:^7.0.0, semver@npm:^7.1.1, semver@npm:^7.1.2, semver@npm:^7.2.1, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.7, semver@npm:^7.3.8":
   version: 7.3.8
   resolution: "semver@npm:7.3.8"
   dependencies:
