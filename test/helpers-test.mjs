@@ -1,8 +1,8 @@
-import {describe} from 'ava-spec';
+import test from 'ava-spec';
 
 import sinon from 'sinon';
 
-import {delay, finallyRejectsWithInitial} from '../lib/helpers';
+import helpers from '../lib/helpers.js';
 
 const mark = () =>
   (
@@ -12,21 +12,25 @@ const mark = () =>
       )
   )(process.hrtime());
 
-describe('finallyRejectsWithInitial', (it) => {
+test.describe('finallyRejectsWithInitial', (it) => {
   it('invokes the function', async (t) => {
     const spy = sinon.spy();
-    await finallyRejectsWithInitial(Promise.resolve(), spy);
+    await helpers.finallyRejectsWithInitial(Promise.resolve(), spy);
     t.true(spy.calledOnce);
     spy.resetHistory();
 
     await t.throws(
-      finallyRejectsWithInitial(Promise.reject(new Error('test 1')), spy),
+      () =>
+        helpers.finallyRejectsWithInitial(
+          Promise.reject(new Error('test 1')),
+          spy
+        ),
       'test 1'
     );
     t.true(spy.calledOnce);
     spy.resetHistory();
 
-    await finallyRejectsWithInitial(delay(11), spy);
+    await helpers.finallyRejectsWithInitial(helpers.delay(11), spy);
     t.true(spy.calledOnce);
   });
 
@@ -34,14 +38,18 @@ describe('finallyRejectsWithInitial', (it) => {
     const stub = sinon.stub().rejects(new Error('second'));
 
     await t.throws(
-      finallyRejectsWithInitial(Promise.resolve(), stub),
+      () => helpers.finallyRejectsWithInitial(Promise.resolve(), stub),
       'second'
     );
     t.true(stub.calledOnce);
     stub.resetHistory();
 
     await t.throws(
-      finallyRejectsWithInitial(Promise.reject(new Error('first')), stub),
+      () =>
+        helpers.finallyRejectsWithInitial(
+          Promise.reject(new Error('first')),
+          stub
+        ),
       'first'
     );
     t.true(stub.calledOnce);
@@ -51,7 +59,7 @@ describe('finallyRejectsWithInitial', (it) => {
     const stub = sinon.stub().returns('second');
 
     t.is(
-      await finallyRejectsWithInitial(Promise.resolve('first'), stub),
+      await helpers.finallyRejectsWithInitial(Promise.resolve('first'), stub),
       'first'
     );
   });
@@ -59,17 +67,21 @@ describe('finallyRejectsWithInitial', (it) => {
   it('handles synchronous exceptions', async (t) => {
     const stub = sinon.stub().throws(new Error('err 2'));
 
-    await t.throws(finallyRejectsWithInitial(Promise.resolve(), stub), 'err 2');
+    await t.throws(
+      () => helpers.finallyRejectsWithInitial(Promise.resolve(), stub),
+      'err 2'
+    );
     t.true(stub.calledOnce);
     stub.resetHistory();
 
     const measure = mark();
     await t.throws(
-      finallyRejectsWithInitial(
-        delay(11).then(() => Promise.reject(new Error('err 1'))),
-        stub
-      ),
-      'err 1'
+      () =>
+        helpers.finallyRejectsWithInitial(
+          helpers.delay(11).then(() => Promise.reject(new Error('err 1'))),
+          stub
+        ),
+      {}
     );
     t.true(measure() >= 10);
     t.true(stub.calledOnce);
@@ -77,11 +89,11 @@ describe('finallyRejectsWithInitial', (it) => {
   });
 
   it('waits for the returned Promise', async (t) => {
-    const stub = sinon.stub().returns(delay(11, 'twelve'));
+    const stub = sinon.stub().returns(helpers.delay(11, 'twelve'));
 
     const measure = mark();
     t.is(
-      await finallyRejectsWithInitial(Promise.resolve('eleven'), stub),
+      await helpers.finallyRejectsWithInitial(Promise.resolve('eleven'), stub),
       'eleven'
     );
     t.true(measure() >= 10);

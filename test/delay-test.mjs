@@ -1,10 +1,10 @@
-import {describe} from 'ava-spec';
+import test from 'ava-spec';
 
-import Queue from '../lib/queue';
-import helpers from '../lib/helpers';
+import Queue from '../lib/queue.js';
+import helpers from '../lib/helpers.js';
 import sinon from 'sinon';
 
-import redis from '../lib/redis';
+import redis from '../lib/redis.js';
 
 import {EventEmitter as Emitter} from 'events';
 
@@ -37,7 +37,7 @@ function reef(n = 1) {
   };
 }
 
-describe('Delayed jobs', (it) => {
+test.describe('Delayed jobs', (it) => {
   const redisUrl = process.env.BEE_QUEUE_TEST_REDIS;
   const gclient = redis.createClient(redisUrl);
 

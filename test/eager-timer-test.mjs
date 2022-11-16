@@ -1,21 +1,19 @@
-import {describe} from 'ava-spec';
+import test from 'ava-spec';
 import sandbox from 'sandboxed-module';
 import lolex from 'lolex';
 import sinon from 'sinon';
 
 function maybeCoverage() {
-  return Object.keys(require.cache).some((path) =>
-    path.includes('node_modules/nyc')
-  );
+  return false;
 }
 
-describe('EagerTimer', (it) => {
+test.describe('EagerTimer', (it) => {
   it.beforeEach(async (t) => {
     // Some reasonable time so we don't start at 0.
     const start = 10;
     const clock = lolex.createClock(start);
 
-    const EagerTimer = sandbox.require('../lib/eager-timer', {
+    const EagerTimer = sandbox.require('../lib/eager-timer.mjs', {
       locals: {
         setTimeout: clock.setTimeout,
         clearTimeout: clock.clearTimeout,
