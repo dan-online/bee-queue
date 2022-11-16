@@ -3,7 +3,6 @@
   "extends": ["config:base", ":semanticCommits"],
   "includeForks": true,
   "labels": ["dependencies"],
-  "schedule": ["before 12pm on Sunday"],
   "github-actions": {
     "enabled": false
   },
